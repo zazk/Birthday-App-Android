@@ -5,17 +5,28 @@
     android:layout_height="match_parent"
     tools:context="pe.cubix.happybirthday.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Happy Birthday!" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
         android:src="@drawable/androidparty" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="From, Zazk" />
+        android:text="Happy Birthday!"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#fff"
+        android:padding="20dp"
+        android:textSize="36sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="From, Zazk"
+        android:textColor="#fff"
+        android:fontFamily="sans-serif-light"
+        android:textSize="36sp"/>
 </RelativeLayout>
