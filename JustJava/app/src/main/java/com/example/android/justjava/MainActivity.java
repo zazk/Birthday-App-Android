@@ -13,6 +13,8 @@ import java.text.NumberFormat;
 public class MainActivity extends ActionBarActivity {
 
     int numberOfCoffees = 2;
+    int quantity = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +25,10 @@ public class MainActivity extends ActionBarActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display( numberOfCoffees );
-        displayPrice( numberOfCoffees*5 );
+        int price = quantity * 5;
+        String priceMessage = "Total $" +  price + "";
+        priceMessage = priceMessage + ". \nThank You";
+        displayMessage(priceMessage);
     }
 
     /**
@@ -39,7 +43,6 @@ public class MainActivity extends ActionBarActivity {
      * This method increment the given quantity value on the screen.
      */
     public void increment(View view) {
-        int quantity = 2;
         quantity = quantity + 1;
         display(quantity);
     }
@@ -47,8 +50,7 @@ public class MainActivity extends ActionBarActivity {
      * This method decrement the given quantity value on the screen.
      */
     public void decrement(View view) {
-        int quantity = 1;
-        quantity = quantity + 1;
+        quantity = quantity - 1;
         display(quantity);
     }
     /**
@@ -58,4 +60,12 @@ public class MainActivity extends ActionBarActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
+    }
+
 }
