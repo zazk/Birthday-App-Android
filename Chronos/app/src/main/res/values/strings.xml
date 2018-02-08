@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Chronos</string>
     <string name="seconds">%d seconds elapsed</string>
+    <string name="button_label_go">Go to Activity</string>
+    <string name="title_activity_location">LocationActivity</string>
+    <string name="location">Location Position</string>
+    <string name="back">Back to Previous Activity</string>
 </resources>
