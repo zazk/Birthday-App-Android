@@ -36,9 +36,11 @@ class MainActivity : AppCompatActivity() {
         subscribe()
 
         buttonx.setOnClickListener{
-            val intent = Intent(this,LocationActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,LocationActivity::class.java))
             Log.d("Chrono Activity","creating Activity")
+        }
+        buttonslider.setOnClickListener{
+            startActivity( Intent(this, SliderActivity::class.java))
         }
     }
 
